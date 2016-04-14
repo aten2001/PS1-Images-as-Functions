@@ -25,10 +25,11 @@ def main():
     time.sleep(3.0)
 
   if submission.result():
-    result = json.loads(submission.result())
+    result = submission.result()
     print json.dumps(result, indent=4)
   elif submission.error_report():
-    print submission.error_report()
+    error_report = submission.error_report()
+    print json.dumps(error_report, indent=4)
   else:
     print "Unknown error."
 
