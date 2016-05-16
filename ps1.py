@@ -1,31 +1,41 @@
 import math
 import numpy as np
 import cv2
+import sys
 
-## Implement the functions below.
+cv2_version = int(cv2.__version__[0])
+assert cv2_version == 3, "OpenCV version is not 3.0+"
+assert sys.version_info >= (3, 5), "Python version is not 3.5"
+
+# # Implement the functions below.
+
 
 def extractRed(image):
     """ Returns the red channel of the input image.
     """
     pass
 
+
 def extractGreen(image):
     """ Returns the green channel of the input image.
     """
     pass
+
 
 def extractBlue(image):
     """ Returns the blue channel of the input image.
     """
     pass   
 
+
 def swapRedBlue(image):
     """ Returns an image with the red and blue channels of the input image swapped.
     """
     pass
 
+
 def copyPasteMiddle(src, dst, shape):
-    """ Copys the middle region of size shape from src to the middle of dst.
+    """ Copies the middle region of size shape from src to the middle of dst.
 
         Note: Assumes that src and dst are monochrome images, i.e. 2d arrays.
 
@@ -37,10 +47,12 @@ def copyPasteMiddle(src, dst, shape):
     """
     pass
 
+
 def imageStats(image):
     """ Returns the tuple (min,max,mean,stddev) of statistics for the input monochrome image.
     """
     pass
+
 
 def normalized(image, stddev):
     """Returns an image with the same mean as the original but with values
@@ -51,6 +63,7 @@ def normalized(image, stddev):
     a float64 type before passing in an image.
     """
     pass
+
 
 def shiftImageLeft(image, shift):
     """ Outputs the input monochrome image shifted shift pixels to the left.
@@ -69,6 +82,7 @@ def differenceImage(img1, img2):
     """Returns the absolute value of the difference between the two input images.
     """
     pass
+
 
 def addNoise(image, channel, sigma):
     """ Returns a copy of the input color image with Gaussian noise added to 
