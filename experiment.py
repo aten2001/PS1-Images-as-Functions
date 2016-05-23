@@ -64,24 +64,22 @@ def main():
 
     # # 4d
     diff_green = differenceImage(img1_green, shift_green)
-    cv2.normalize(diff_green, diff_green, 0, 255, cv2.NORM_MINMAX)
     cv2.imwrite('output/ps1-4-d-1.png', diff_green)
 
     # # 5 Noise
-    img1_f64 = img1.astype('float64')
 
     # Choose a sigma value
     sigma = None
 
     # # 5a
     channel = None
-    noisy_green = addNoise(img1_f64, channel, sigma)
-    cv2.imwrite('output/ps1-5-a-1.png', np.clip(noisy_green, 0, 255))
+    noisy_green = addNoise(img1, channel, sigma)
+    cv2.imwrite('output/ps1-5-a-1.png', noisy_green)
 
     # # 5b
     channel = None
-    noisy_blue = addNoise(img1_f64, channel, sigma)
-    cv2.imwrite('output/ps1-5-b-1.png', np.clip(noisy_blue, 0, 255))
+    noisy_blue = addNoise(img1, channel, sigma)
+    cv2.imwrite('output/ps1-5-b-1.png', noisy_blue)
 
 if __name__ == "__main__":
     main()
