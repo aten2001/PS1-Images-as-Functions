@@ -27,16 +27,21 @@ def main():
 
     # # 2b
     img1_green = extractGreen(img1)
+    assert len(img1_green.shape) == 2, "The monochrome image must be a 2D array"
     cv2.imwrite('output/ps1-2-b-1.png', img1_green)
     
     # # 2c
     img1_red = extractRed(img1)
+    assert len(img1_red.shape) == 2, "The monochrome image must be a 2D array"
     cv2.imwrite('output/ps1-2-c-1.png', img1_red)
 
     # # 3 Replacement of Pixels
 
     # # 3a
-    mono1 = cv2.imread('output/ps1-2-b-1.png', cv2.IMREAD_GRAYSCALE)
+
+    # Choose the monochrome image for img1
+    mono1 = None
+
     mono2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
     replaced_img = copyPasteMiddle(mono1, mono2, (100, 100))
@@ -54,9 +59,8 @@ def main():
     print("The std dev of img1_green is", stddev_green)
 
     # # 4b
-    img1_green = img1_green.astype('float64')
     normalized_img = normalized(img1_green, 10)
-    cv2.imwrite('output/ps1-4-b-1.png', np.clip(normalized_img, 0, 255))
+    cv2.imwrite('output/ps1-4-b-1.png', normalized_img)
 
     # # 4c
     shift_green = shiftImageLeft(img1_green, 2)
