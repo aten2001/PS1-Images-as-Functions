@@ -80,7 +80,7 @@ def shiftImageLeft(image, shift):
 
 
 def differenceImage(img1, img2):
-    """Returns the absolute value of the difference between the two input images.
+    """Returns the normalized value of the difference between the two input images.
     """
     pass
 
