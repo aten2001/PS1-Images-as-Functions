@@ -3,11 +3,6 @@ import numpy as np
 import cv2
 import sys
 
-cv2_version = int(cv2.__version__[0])
-python_version = sys.version_info
-assert cv2_version == 3, "OpenCV version is not 3.0+"
-assert python_version.major == 3, "Python version is not 3.X"
-
 # # Implement the functions below.
 
 
