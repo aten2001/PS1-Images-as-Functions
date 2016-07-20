@@ -3,8 +3,9 @@ import os
 import sys
 import argparse
 import json
-import yaml
+import datetime
 from bonnie.submission import Submission
+
 def main():
   parser = argparse.ArgumentParser(description='Submits code to the Udacity site.')
   parser.add_argument('--provider', choices = ['gt', 'udacity'], default = 'udacity')
