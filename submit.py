@@ -30,7 +30,7 @@ def main():
     filename = "%s-result-%s.json" % (quiz, timestamp)
 
     with open(filename, "w") as fd:
-      json.dump(result, fd, indent=4, separators=(',', ': '))
+      json.dump(feedback, fd, indent=4, separators=(',', ': '))
 
     print feedback['console_summary']
 
