@@ -11,18 +11,30 @@ def main():
   parser.add_argument('--environment', choices = ['local', 'development', 'staging', 'production'], default = 'production')
 
   args = parser.parse_args()
+  quiz = 'ps01'
 
-  submission = Submission('cs6476', 'ps01', 
+  submission = Submission('cs6476', quiz, 
                           filenames = ["ps1.py"],
                           environment = args.environment, 
                           provider = args.provider)
+
+  timestamp = "{:%Y-%m-%d-%H-%M-%S}".format(datetime.datetime.now())
 
   while not submission.poll():
     time.sleep(3.0)
 
   if submission.feedback():
     feedback = submission.result()
+
+    filename = "%s-result-%s.json" % (quiz, timestamp)
+
+    with open(filename, "w") as fd:
+      json.dump(result, fd, indent=4, separators=(',', ': '))
+
     print feedback['console_summary']
+
+    print "(Details available in %s.)" % filename
+
   elif submission.error_report():
     error_report = submission.error_report()
     print json.dumps(error_report, indent=4)
