@@ -12,21 +12,17 @@ def main():
 
   args = parser.parse_args()
 
-  app_data_dir = os.path.abspath(".bonnie")
-
   submission = Submission('cs6476', 'ps01', 
-                          filenames = ["ps1.py"], 
-                          exclude = False, 
+                          filenames = ["ps1.py"],
                           environment = args.environment, 
-                          provider = args.provider,
-                          app_data_dir = app_data_dir)
+                          provider = args.provider)
 
   while not submission.poll():
     time.sleep(3.0)
 
-  if submission.result():
-    result = submission.result()
-    print json.dumps(result, indent=4)
+  if submission.feedback():
+    feedback = submission.result()
+    print feedback['console_summary']
   elif submission.error_report():
     error_report = submission.error_report()
     print json.dumps(error_report, indent=4)
