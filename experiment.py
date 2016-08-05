@@ -22,8 +22,8 @@ def main():
     # # 2 Color Planes
 
     # # 2a
-    swapped_red_blue_img = swapRedBlue(img1)
-    cv2.imwrite('output/ps1-2-a-1.png', swapped_red_blue_img)
+    swapped_green_blue_img = swapGreenBlue(img1)
+    cv2.imwrite('output/ps1-2-a-1.png', swapped_green_blue_img)
 
     # # 2b
     img1_green = extractGreen(img1)

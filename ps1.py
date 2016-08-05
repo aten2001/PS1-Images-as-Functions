@@ -24,8 +24,8 @@ def extractBlue(image):
     pass   
 
 
-def swapRedBlue(image):
-    """ Returns an image with the red and blue channels of the input image swapped.
+def swapGreenBlue(image):
+    """ Returns an image with the green and blue channels of the input image swapped.
     """
     pass
 
