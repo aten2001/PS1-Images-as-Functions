@@ -6,6 +6,9 @@ The purpose of this problem set is to make sure you can have setup your developm
 ##Setup
 If you have not already done so, please follow the instructions in the file `Installation.md` to setup your development environment.
 
+First, clone this repository:
+`git clone --recursive https://github.gatech.edu/omscs6476/ps01.git`
+
 In addition to script files provided in this repository, you will need to import some dependencies from another git repository.  Running
 
 <pre>
@@ -22,3 +25,8 @@ First, follow the installation guide in the [Installation.md](https://github.gat
 
 The problem set requirements are in this link: 
 [Problem Set 1: Images as Functions](https://docs.google.com/document/d/1HLd6LMPjnx-nVdAXIKZZ1sHKydY61_ulhvKqJQEcpRY/edit?usp=sharing)
+
+Once you are ready to submit run the following command:
+`python submit.py --provider gt`
+
+This will automatically send your `ps1.py` file to the auto grader. Notice that **only one file** is sent so do not split your code into multiple files.
