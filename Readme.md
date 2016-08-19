@@ -1,32 +1,16 @@
-#Problem Set 1: Images as Functions (really, arrays or matrices of numbers)
+# Problem Set 1: Images as Functions (really, arrays or matrices of numbers)
 
-##Description
+## Description
 The purpose of this problem set is to make sure you can have setup your development environment and can load an image, manipulate the values, produce some output, and submit the code along with the report.
 
-##Setup
-If you have not already done so, please follow the instructions in the file `Installation.md` to setup your development environment.
-
-First, clone this repository:
+## Setup
+Clone this repository recursively:
 `git clone --recursive https://github.gatech.edu/omscs6476/ps01.git`
 
-In addition to script files provided in this repository, you will need to import some dependencies from another git repository.  Running
+(If your version of git does not support recurse clone, then clone without the option and tun `git submodule init` and `git submodule update`).
 
-<pre>
-	<code>
-		git submodule init
-		git submodule update
-	</code>
-</pre>
-
-should do the trick.
-
-##Instructions
-First, follow the installation guide in the [Installation.md](https://github.gatech.edu/omscs6476/ps01/blob/master/Installation.md) file.  If you have questions, please post them to Piazza.
+## Instructions
+Follow the installation guide in the [Installation.md](https://github.gatech.edu/omscs6476/ps01/blob/master/Installation.md) file.  If you have questions, please post them to Piazza.
 
 The problem set requirements are in this link: 
 [Problem Set 1: Images as Functions](https://docs.google.com/document/d/1HLd6LMPjnx-nVdAXIKZZ1sHKydY61_ulhvKqJQEcpRY/edit?usp=sharing)
-
-Once you are ready to submit run the following command:
-`python submit.py --provider gt`
-
-This will automatically send your `ps1.py` file to the auto grader. Notice that **only one file** is sent so do not split your code into multiple files.
