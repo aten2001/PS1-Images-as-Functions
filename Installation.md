@@ -27,7 +27,7 @@ run
 	</code>
 </pre>
 
-Once this completes, from any subdirectory, you should be able to start your virtual machine with just the command `vagrant up` and connect to it with just `vagrant ssh`.  See the [Vagrant documentation](https://www.vagrantup.com/docs/getting-started/) for more details.
+This will create a Vagrantfile in your working directory.  Once this completes, from any subdirectory, you should be able to start your virtual machine with just the command `vagrant up` and connect to it with just `vagrant ssh`.  See the [Vagrant documentation](https://www.vagrantup.com/docs/getting-started/) for more details.
 
 ## Native Installation
 If you prefer run your code natively on your machine, you will need to install python, numpy, and opencv.
