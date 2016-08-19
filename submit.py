@@ -6,16 +6,48 @@ import json
 import datetime
 from bonnie.submission import Submission
 
+LATE_POLICY = \
+"""Late Policy:
+
+  \"I have read the late policy for CS6475. I understand that only my last 
+  commit before the late submission deadline will be accepted and that late 
+  penalties apply if any part of the assignment is submitted late.\"
+"""
+
+HONOR_PLEDGE = "Honor Pledge:\n\n  \"I have neither given nor received aid on this assignment.\"\n"
+
+def require_pledges():
+  print(LATE_POLICY)
+  ans = raw_input("Please type 'yes' to agree and continue>")
+  if ans != "yes":
+    raise RuntimeError("Late policy not accepted.")
+
+  print
+  print(HONOR_PLEDGE)
+  ans = raw_input("Please type 'yes' to agree and continue>")
+  if ans != "yes":
+    raise RuntimeError("Honor pledge not accepted")
+  print
+
+
 def main():
   parser = argparse.ArgumentParser(description='Submits code to the Udacity site.')
   parser.add_argument('--provider', choices = ['gt', 'udacity'], default = 'gt')
   parser.add_argument('--environment', choices = ['local', 'development', 'staging', 'production'], default = 'production')
+  parser.add_argument('part', choices = ['ps01', 'ps01_report'], required = True)
 
   args = parser.parse_args()
-  quiz = 'ps01'
+  quiz = args.part
+
+  if quiz == "ps01":
+    filenames = ["ps1.py"]
+  else:
+    filenames = ['ps01_report.pdf']
+
+  require_pledges()
 
   submission = Submission('cs6476', quiz, 
-                          filenames = ["ps1.py"],
+                          filenames = filenames,
                           environment = args.environment, 
                           provider = args.provider)
 
