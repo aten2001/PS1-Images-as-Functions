@@ -34,7 +34,7 @@ def main():
   parser = argparse.ArgumentParser(description='Submits code to the Udacity site.')
   parser.add_argument('--provider', choices = ['gt', 'udacity'], default = 'gt')
   parser.add_argument('--environment', choices = ['local', 'development', 'staging', 'production'], default = 'production')
-  parser.add_argument('part', choices = ['ps01', 'ps01_report'], required = True)
+  parser.add_argument('part', choices = ['ps01', 'ps01_report'])
 
   args = parser.parse_args()
   quiz = args.part
