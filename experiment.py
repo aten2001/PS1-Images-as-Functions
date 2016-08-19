@@ -78,12 +78,12 @@ def main():
     sigma = None
 
     # # 5a
-    channel = None
+    channel = 1
     noisy_green = addNoise(img1, channel, sigma)
     cv2.imwrite('output/ps1-5-a-1.png', noisy_green)
 
     # # 5b
-    channel = None
+    channel = 0
     noisy_blue = addNoise(img1, channel, sigma)
     cv2.imwrite('output/ps1-5-b-1.png', noisy_blue)
 
