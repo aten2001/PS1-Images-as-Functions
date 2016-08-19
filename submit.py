@@ -9,7 +9,7 @@ from bonnie.submission import Submission
 LATE_POLICY = \
 """Late Policy:
 
-  \"I have read the late policy for CS6475. I understand that only my last 
+  \"I have read the late policy for CS6476. I understand that only my last 
   commit before the late submission deadline will be accepted and that late 
   penalties apply if any part of the assignment is submitted late.\"
 """
