@@ -46,6 +46,7 @@ def main():
 
   require_pledges()
 
+  print "Submission processing...\n"
   submission = Submission('cs6476', quiz, 
                           filenames = filenames,
                           environment = args.environment, 

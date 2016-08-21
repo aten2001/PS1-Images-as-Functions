@@ -12,5 +12,5 @@ Clone this repository recursively:
 ## Instructions
 Follow the installation guide in the [Installation.md](https://github.gatech.edu/omscs6476/ps01/blob/master/Installation.md) file.  If you have questions, please post them to Piazza.
 
-The problem set requirements are in this link: 
+The problem set requirements can be found in this link: 
 [Problem Set 1: Images as Functions](https://docs.google.com/document/d/1HLd6LMPjnx-nVdAXIKZZ1sHKydY61_ulhvKqJQEcpRY/edit?usp=sharing)
