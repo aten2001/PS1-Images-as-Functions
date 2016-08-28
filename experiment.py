@@ -18,8 +18,8 @@ def main():
     assert 100 < img1.shape[1] <= 512, "Check your image 1 dimensions"
     assert 100 < img2.shape[0] <= 512, "Check your image 2 dimensions"
     assert 100 < img2.shape[1] <= 512, "Check your image 2 dimensions"
-    assert img1.shape[1] < img1.shape[0], "Image 1 should be a wide image"
-    assert img2.shape[0] < img2.shape[1], "Image 2 should be a tall image"
+    assert img1.shape[1] > img1.shape[0], "Image 1 should be a wide image"
+    assert img2.shape[0] > img2.shape[1], "Image 2 should be a tall image"
 
     # # 2 Color Planes
 
