@@ -50,7 +50,7 @@ def imageStats(image):
     pass
 
 
-def normalized(image, stddev):
+def normalized(image, scale):
     """Returns an image with the same mean as the original but with values
     scaled about the mean so as to have a standard deviation of stddev.
 
