@@ -6,7 +6,7 @@ from ps1 import *
 
 def main():
 
-    # Insert you image file names here
+    # TODO: Insert your image file paths here:
     img1_filename = None
     img2_filename = None
 
@@ -44,7 +44,9 @@ def main():
 
     # # 3a
 
-    # Choose the monochrome image for img1
+    # TODO: Choose the monochrome image for img1.
+    # This could be either img1_green or img1_red based on what you
+    # found out in the previous section.
     mono1 = None
 
     mono2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
@@ -77,7 +79,7 @@ def main():
 
     # # 5 Noise
 
-    # Choose a sigma value
+    # TODO: Choose a sigma value:
     sigma = None
 
     # # 5a
