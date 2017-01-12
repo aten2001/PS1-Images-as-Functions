@@ -8,7 +8,7 @@ Install the pypi package called "nelson" by running:
 `pip install nelson`
 
 ## Setup
-Clone this repository recursively:
+Clone this repository:
 `git clone https://github.gatech.edu/omscs6476/ps01.git`
 
 ## Instructions
