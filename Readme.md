@@ -14,3 +14,10 @@ Clone this repository:
 ## Instructions
 The problem set requirements can be found in this link:
 [Problem Set 1: Images as Functions](https://docs.google.com/document/d/1HLd6LMPjnx-nVdAXIKZZ1sHKydY61_ulhvKqJQEcpRY/edit?usp=sharing)
+
+## Submission
+Submit ps1.py to the autograder:
+`python submit.py ps01`
+
+Submit ps01_report.pdf and experiment.py:
+`python submit.py ps01_report`
